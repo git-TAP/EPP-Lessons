@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Hind Vadodara", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Helvetica Neue, Arial, sans-serif;
+}
+.container1 {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.main1 {
+  height: calc(100% - 50px);
+  display: flex;
+  flex: 1;
+}
+.sidebar1 {
+  height: 100%;
+  width: 220px;
+  box-sizing: border-box;
+  box-shadow: 0 0 2rem 0 rgb(0 0 0 / 5%);
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+.container1.nav-closed1 .sidebar1,
+.container1.nav-closed1 .header-logo1 {
+  width: 0;
+}
+.sidebar1 ul {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.sidebar1 ul li {
+  display: flex;
+  align-items: center;
+}
+.sidebar1 ul li a {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  white-space: nowrap;
+}
+.sidebar1 ul li a.active,
+.sidebar1 ul li a:hover {
+  background: #e8ecef;
+}
+.sidebar1 ul li span {
+  margin-left: 16px;
+  font-size: 16px;
+  font-weight: 100;
+}
+.sidebar1 ul li i {
+  font-size: 18px;
+  color: #111;
+  font-weight: normal;
+}
+.header1 {
+  height: 50px;
+  background: #303f9f;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
+}
+.sidebar1 ul li a.active i {
+  color: #303f9e;
+}
+.sidebar1:hover{
+   overflow-y: scroll;
+}
+.site-logo1 {
+  height: 32px;
+  width: 32px;
+  min-height: 32px;
+  min-width: 32px;
+  margin: 0 18px 0 15px;
+}
+.site-logo1 path {
+  fill: #fff;
+}
+.site-title1 {
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.page-content1 {
+  padding: 10px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+}
+.page-content1 h1 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #333;
+}
+.page-content1:hover{
+   overflow-y: scroll;
+}
+.header-search1 {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  padding: 0 20px;
+  flex: 1;
+}
+.header-search1 .button-menu1 {
+  width: 28px;
+  height: 28px;
+  margin-right: 15px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.header-logo1 {
+  display: flex;
+  align-items: center;
+  width: 220px;
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+.header-search1 input[type="search"] {
+  height: 100%;
+  width: 300px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 100;
+  background: none;
+  border: none;
+  color: #fff;
+}
+.header-search1 input[type="search"]:focus {
+  outline: none;
+}
+.header-search1 input[type="search"]::placeholder {
+  color: #ccc;
+}
+.header-search1 .button-menu1:focus {
+  outline: none;
+  border: none;
+}
+.header-search1 .button-menu1 svg path {
+  fill: #fff;
+}
+@media screen and (max-width: 991px) {
+  .page-content1 {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-logo1 {
+    display: none;
+  }
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: black;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+
+.head-1{
+  font-size: 40px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E8ECEF; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #303F9F; 
+}
+
+.a {
+  text-indent: 50px;
+  text-align: justify;
+}
+
+.question{
+  font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+  font-family: sans-serif;
+  font-size: 20px;
+  background-color: #279;
+  color: #fff;
+  border: 0px;
+  border-radius: 3px;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#submit:hover{
+  background-color: #38a;
+}
+.listed{
+  margin-left: 60px;
+}
+.indent{
+  text-indent: 20px;
+}
+
+/*----  Main Style  ----*/
+#cards_landscape_wrap-2{
+  text-align: center;
+  background: #F7F7F7;
+}
+#cards_landscape_wrap-2 .container{
+  padding-top: 30px; 
+  padding-bottom: 30px;
+}
+#cards_landscape_wrap-2 a{
+  text-decoration: none;
+  outline: none;
+}
+#cards_landscape_wrap-2 .card-flyer {
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box{
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box img{
+  -webkit-transition:all .9s ease; 
+  -moz-transition:all .9s ease; 
+  -o-transition:all .9s ease;
+  -ms-transition:all .9s ease; 
+  width: 100%;
+  height: 200px;
+}
+#cards_landscape_wrap-2 .card-flyer:hover .image-box img{
+  opacity: 0.7;
+  -webkit-transform:scale(1.15);
+  -moz-transform:scale(1.15);
+  -ms-transform:scale(1.15);
+  -o-transform:scale(1.15);
+  transform:scale(1.15);
+}
+#cards_landscape_wrap-2 .card-flyer .text-box{
+  text-align: center;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box .text-container{
+  padding: 30px 18px;
+}
+#cards_landscape_wrap-2 .card-flyer{
+  background: #FFFFFF;
+  margin-top: 50px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+}
+#cards_landscape_wrap-2 .card-flyer:hover{
+  background: #fff;
+  box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  margin-top: 50px;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box p{
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px; 
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box h6{
+  margin-top: 0px;
+  margin-bottom: 4px; 
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto Black', sans-serif;
+  letter-spacing: 1px;
+  color: rgb(48, 63, 159);
+}
+
+
+
+.showcase {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.showcase img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99
+}
+
+.showcase .overlay {
+  width: 100%;
+  height: 250px;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999
+}
+
+.showcase h2 {
+  margin-top: 170px;
+  font-size: 3em;
+}
+
+.showcase p {
+  margin-top: 8px;
+  font-size: 1.2em;
+}

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>EPP Final Project</title>
+    <link rel="icon" href="images/logoEPP.png">
+	<link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;500&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+  <style type="text/css">
+    .page-content1{
+    background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%230FF'/%3E%3Cstop offset='1' stop-color='%23333333'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23303f9f'/%3E%3Cstop offset='1' stop-color='%23333333'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='3.3'%3E%3Cpath transform='translate(-15.4 -8.8) rotate(-8.8 1409 581) scale(0.934)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='1.1' transform='translate(-55 22) rotate(-4.4 800 450) scale(0.989)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(-15.4 33) rotate(-55 401 736) scale(0.989)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='1'%3E%3Cpath transform='translate(132 13.2) rotate(-3.3 150 345) scale(1.022)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='2.2' transform='translate(33 -66) rotate(-79.2 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='translate(-8.8 -8.8) rotate(-13.2 1400 132) scale(0.89)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+    }
+    .morph{
+    background: rgba( 255, 255, 255, 0.00 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 12.5px );
+-webkit-backdrop-filter: blur( 12.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+    .morph2{
+     background: rgba( 48, 63, 159, 1.00 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 0.0px );
+-webkit-backdrop-filter: blur( 0.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+color: white;
+    }
+
+    h1 {
+  text-align: center;
+ 
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 50px;
+  letter-spacing: 1px;
+  color: #333;
+}
+h1 span {
+  display: inline-block;
+  animation: slideLeft 1.5s forwards;
+  opacity: 0;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  } 
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.card-color{
+    background: rgba( 48, 63, 159, 0.05 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 1.0px );
+-webkit-backdrop-filter: blur( 1.0px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.cute-robot-v1 {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cute-robot-v1 * {
+  box-sizing: border-box;
+}
+.cute-robot-v1 .circle-bg {
+  background: #cedbdd;
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  border: 8px solid #195272;
+  position: relative;
+}
+.cute-robot-v1 .circle-bg:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  top: -3px;
+  left: 0;
+  border-radius: 100%;
+  border-bottom: 10px solid #195272;
+}
+.cute-robot-v1 .circle-bg:hover .robot-face {
+  top: 40px !important;
+}
+.cute-robot-v1 .circle-bg:hover .eyes {
+  top: 30px !important;
+}
+.cute-robot-v1 .circle-bg:hover .mouth {
+  background: #195272;
+  border: none;
+  clip-path: polygon(0% 30%, 100% 30%, 100% 100%, 0% 100%);
+}
+.cute-robot-v1 .circle-bg:hover .mouth:after {
+  content: "";
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  bottom: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f9bbbb;
+  border-radius: 100%;
+}
+.cute-robot-v1 .circle-bg .robot-head {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+  border: 8px solid #195272;
+  border-radius: 85px/60px;
+  background: #ffffff;
+  z-index: 4;
+}
+.cute-robot-v1 .circle-bg .robot-head:after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  height: 30px;
+  width: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #195272;
+}
+.cute-robot-v1 .circle-bg .robot-head:before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20px;
+  width: 20px;
+  background: #cedbdd;
+  border: 8px solid #195272;
+  border-radius: 100%;
+}
+.cute-robot-v1 .circle-bg .robot-head .robot-face {
+  height: 120px;
+  width: 160px;
+  background: #cedbdd;
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid #195272;
+  transition: all 200ms;
+  border-radius: 45px;
+}
+.cute-robot-v1 .circle-bg .robot-head .robot-face .eyes {
+  height: 20px;
+  width: 20px;
+  background: #195272;
+  border-radius: 100%;
+  position: absolute;
+  transition: all 200ms;
+  top: 40px;
+}
+.cute-robot-v1 .circle-bg .robot-head .robot-face .eyes.left {
+  left: 30px;
+}
+.cute-robot-v1 .circle-bg .robot-head .robot-face .eyes.right {
+  right: 30px;
+}
+.cute-robot-v1 .circle-bg .robot-head .robot-face .mouth {
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+  border: 8px solid transparent;
+  border-bottom-color: #195272;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50px;
+  overflow: hidden;
+}
+.cute-robot-v1 .circle-bg .robot-ear {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background: #ffffff;
+  border: 8px solid #195272;
+  z-index: 3;
+  top: 30px;
+}
+.cute-robot-v1 .circle-bg .robot-ear.left {
+  left: -20px;
+}
+.cute-robot-v1 .circle-bg .robot-ear.right {
+  right: -20px;
+}
+.cute-robot-v1 .circle-bg .robot-body {
+  height: 50px;
+  width: 100px;
+  border: 8px solid #195272;
+  background: #ffffff;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 25px 25px 30px 30px;
+}
+  </style>
+</head>
+<body>
+	<div class="container1">
+  <div class="header1">
+    <div class="header-logo1">
+      <svg class="site-logo1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path d="M512 256a15 15 0 00-7.1-12.8l-52-32 52-32.5a15 15 0 000-25.4L264 2.3c-4.8-3-11-3-15.9 0L7 153.3a15 15 0 000 25.4L58.9 211 7.1 243.3a15 15 0 000 25.4L58.8 301 7.1 333.3a15 15 0 000 25.4l241 151a15 15 0 0015.9 0l241-151a15 15 0 00-.1-25.5l-52-32 52-32.5A15 15 0 00512 256zM43.3 166L256 32.7 468.7 166 256 298.3 43.3 166zM468.6 346L256 479.3 43.3 346l43.9-27.4L248 418.7a15 15 0 0015.8 0L424.4 319l44.2 27.2zM256 388.3L43.3 256l43.9-27.4L248 328.7a15 15 0 0015.8 0L424.4 229l44.1 27.2L256 388.3z" />
+      </svg>
+      <span class="site-title1">EPP Lessons</span>
+    </div>
+    <div class="header-search1">
+      <button class="button-menu1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385 385">
+          <path d="M12 120.3h361a12 12 0 000-24H12a12 12 0 000 24zM373 180.5H12a12 12 0 000 24h361a12 12 0 000-24zM373 264.7H132.2a12 12 0 000 24H373a12 12 0 000-24z" />
+        </svg></button>
+      <input type="search" placeholder="Search Documentation..." />
+    </div>
+  </div>
+  <div class="main1">
+    <div class="sidebar1">
+      <ul>
+        <li><a href="index.html" ><i class="lni lni-home"></i><span>Home</span></a></li>
+        <li><a href="nouns.html"><i class="lni lni-book"></i><span>Nouns</span></a></li>
+        <li><a href="pronouns.html"><i class="lni lni-book"></i><span>Pronouns</span></a></li>
+        <li><a href="adjectives.html"><i class="lni lni-book"></i><span>Adjectives</span></a></li>
+        <li><a href="verbs.html"><i class="lni lni-book"></i><span>Verbs</span></a></li>
+        <li><a href="synonyms.html"><i class="lni lni-book"></i><span>Synonyms</span></a></li>
+        <li><a href="antonyms.html"><i class="lni lni-book"></i><span>Antonyms</span></a></li>
+        <li><a href="homonyms.html"><i class="lni lni-book"></i><span>Homonyms</span></a></li>
+        <li><a href="subject-verbs.html"><i class="lni lni-book"></i><span>Subject-Verb Agreement</span></a></li>
+        <li><a href="adverbs.html"><i class="lni lni-book"></i><span>Adverbs</span></a></li>
+        <li><a href="determiners.html"><i class="lni lni-book"></i><span>Determiners</span></a></li>
+        <li><a href="conjunctions.html"><i class="lni lni-book"></i><span>Conjunctions</span></a></li>
+        <li><a href="punctuations.html"><i class="lni lni-book"></i></i><span>Punctuation</span></a></li>
+        <li><a href="prepositions.html"><i class="lni lni-book"></i></i><span>Prepositions</span></a></li>
+        <li><a href="compounds.html"><i class="lni lni-book"></i></i><span>Compound Words</span></a></li>
+        <li><a href="phrases.html"><i class="lni lni-book"></i></i><span>Phrases</span></a></li>
+         <li><a href="about.html" class="active"><i class="lni lni-users"></i></i><span>About</span></a></li>
+      </ul>
+    </div>
+    <div class="page-content1">
+      <div class="row">
+          <div class="col-md-4">
+
+          </div>
+           <div class="col-md-4">
+               <div class="card-color">
+                   <div class="card-header">
+                    <h1 class="animation">Developed By:
+                                                </h1>
+                   </div>
+                    <div class="card-body">
+                        
+                    <p class="card-text text-center">Abdullah Abastillas </p>
+                    <p class="card-text text-center">Ailyn Manzano
+                                    </p>
+                     <p class="card-text text-center">Bryan Angelo Apilan
+                            </p>
+                            <p class="card-text text-center">Franze Bermejo
+                            </p> 
+                             <p class="card-text text-center">Mary Joy Ta&ntildeamor
+                            </p> 
+                            <p class="card-text text-center">Noli Fornoles
+                            </p>
+                        <p class="card-text text-center">Patricia Mae Namoro
+                        </p>
+                      <p class="card-text text-center">Wilfredo Manuel
+                            </p> 
+                        <p class="card-text text-center fw-bold">BSIT-3B</p>
+                        <p class="card-text text-center">Final Requirement in English Proficiency Program Subject</p>
+                        <p class="card-text text-center"><span class="fw-bold">Submitted to:</span> Benedic Baluyot </p>
+                    </div>
+                    </div>
+
+          </div>
+           <div class="col-md-4">
+
+          </div>
+
+      </div>
+      <div class="row">
+          <div class="col-md-4">
+
+          </div>
+           <div class="col-md-4">
+               <div class="cute-robot-v1">
+                <div class="circle-bg">
+                    <div class="robot-ear left"></div>
+                    <div class="robot-head">
+                    <div class="robot-face">
+                        <div class="eyes left"></div>
+                        <div class="eyes right"></div>
+                        <div class="mouth"></div>
+                    </div>
+                    </div>
+                    <div class="robot-ear right"></div>
+                    <div class="robot-body"></div>
+                </div>
+                </div>
+
+          </div>
+           <div class="col-md-4">
+
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<script type="text/javascript" src="style.js"></script>
+<script type="text/javascript">
+	
+	(function(){
+  function buildQuiz(){
+    // variable to store the HTML output
+    const output = [];
+
+    // for each question...
+    myQuestions.forEach(
+      (currentQuestion, questionNumber) => {
+
+        // variable to store the list of possible answers
+        const answers = [];
+
+        // and for each available answer...
+        for(letter in currentQuestion.answers){
+
+          // ...add an HTML radio button
+          answers.push(
+            `<label>
+              <input type="radio" name="question${questionNumber}" value="${letter}">
+              ${letter} :
+              ${currentQuestion.answers[letter]}
+            </label>`
+          );
+        }
+
+        // add this question and its answers to the output
+        output.push(
+          `<div class="question"> ${currentQuestion.question} </div>
+          <div class="answers"> ${answers.join('')} </div>`
+        );
+      }
+    );
+
+    // finally combine our output list into one string of HTML and put it on the page
+    quizContainer.innerHTML = output.join('');
+  }
+
+  function showResults(){
+
+    // gather answer containers from our quiz
+    const answerContainers = quizContainer.querySelectorAll('.answers');
+
+    // keep track of user's answers
+    let numCorrect = 0;
+
+    // for each question...
+    myQuestions.forEach( (currentQuestion, questionNumber) => {
+
+      // find selected answer
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+      // if answer is correct
+      if(userAnswer === currentQuestion.correctAnswer){
+        // add to the number of correct answers
+        numCorrect++;
+
+        // color the answers green
+        answerContainers[questionNumber].style.color = 'lightgreen';
+      }
+      // if answer is wrong or blank
+      else{
+        // color the answers red
+        answerContainers[questionNumber].style.color = 'red';
+      }
+    });
+
+    // show number of correct answers out of total
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+  }
+
+  const quizContainer = document.getElementById('quiz');
+  const resultsContainer = document.getElementById('results');
+  const submitButton = document.getElementById('submit');
+  const myQuestions = [
+    {
+      question: "Who invented JavaScript?",
+      answers: {
+        a: "Douglas Crockford",
+        b: "Sheryl Sandberg",
+        c: "Brendan Eich"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "Which one of these is a JavaScript package manager?",
+      answers: {
+        a: "Node.js",
+        b: "TypeScript",
+        c: "npm"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "Which tool can you use to ensure code quality?",
+      answers: {
+        a: "Angular",
+        b: "jQuery",
+        c: "RequireJS",
+        d: "ESLint"
+      },
+      correctAnswer: "d"
+    },
+    
+  ];
+
+  // Kick things off
+  buildQuiz();
+
+  // Event listeners
+  submitButton.addEventListener('click', showResults);
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+<script>
+    var spanText = function spanText(text) {
+  var string = text.innerText;
+  var spaned = '';
+  for (var i = 0; i < string.length; i++) {
+    if(string.substring(i, i + 1) === ' ') spaned += string.substring(i, i + 1);
+    else spaned += '<span>' + string.substring(i, i + 1) + '</span>';
+  }
+  text.innerHTML = spaned;
+}
+
+var headline = document.querySelector("h1");
+
+spanText(headline);
+
+let animations = document.querySelectorAll('.animation');
+
+animations.forEach(animation => {
+  let letters = animation.querySelectorAll('span');
+  letters.forEach((letter, i) => {
+    letter.style.animationDelay = (i * 0.1) + 's';
+  })
+})
+</script>
+</html>
